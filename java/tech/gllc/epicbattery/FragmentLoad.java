@@ -6,15 +6,13 @@ import android.support.annotation.Nullable;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
 import android.widget.TextView;
-import android.widget.Toast;
 
 /**
  * Created by notif on 1/19/2018.
  */
 
-public class FirstFragment extends Fragment {
+public class FragmentLoad extends Fragment {
 
     View view;
     TextView batteryRange;
@@ -23,7 +21,7 @@ public class FirstFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
 // Inflate the layout for this fragment
-        view = inflater.inflate(R.layout.fragment_first, container, false);
+        view = inflater.inflate(R.layout.fragment_load, container, false);
         batteryRange = view.findViewById(R.id.batteryRange);
         return view;
     }
@@ -36,13 +34,13 @@ public class FirstFragment extends Fragment {
             @Override
             public void onClick(View view) {
 
-                SecondFragment nextFrag= new SecondFragment();
+                FragmentBatteryStatus nextFrag= new FragmentBatteryStatus();
                 getActivity().getFragmentManager().beginTransaction()
                         .replace(R.id.frameLayout, nextFrag,"findThisFragment")
                         .addToBackStack(null)
                         .commit();
 
-                //loadFragment(new SecondFragment());
+                //loadFragment(new FragmentBatteryStatus());
             }
         });
     }

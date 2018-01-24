@@ -1,0 +1,87 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".FragmentBatteryStatus">
+
+    <ImageView
+        android:id="@+id/face"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="35dp"
+        android:layout_marginTop="71dp"
+        android:src="@drawable/okface" />
+
+    <TextView
+        android:id="@+id/batteryConditionText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/face"
+        android:layout_below="@+id/face"
+        android:layout_marginTop="23dp"
+        android:text="Battery Condition" />
+
+    <TextView
+        android:id="@+id/batteryStatusText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/batteryConditionText"
+        android:layout_below="@+id/batteryConditionText"
+        android:text="OK" />
+
+    <ImageView
+        android:id="@+id/battery"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_alignTop="@+id/face"
+        android:layout_marginStart="38dp"
+        android:layout_toEndOf="@+id/batteryConditionText"
+        android:src="@drawable/battery" />
+
+    <ImageView
+        android:id="@+id/sun"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:layout_alignBottom="@+id/battery"
+        android:layout_toEndOf="@+id/battery"
+        android:src="@drawable/sun" />
+
+    <ImageView
+        android:id="@+id/plug"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:layout_alignTop="@+id/battery"
+        android:layout_toEndOf="@+id/battery"
+        android:src="@drawable/plug" />
+
+    <ImageView
+        android:id="@+id/imageView6"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentTop="true"
+        android:src="@drawable/logo" />
+
+    <TextView
+        android:id="@+id/chargeTimeRemaining"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/batteryStatusText"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="31dp"
+        android:text="6h10m remaining to charge" />
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/shopFAB"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_margin="20dp"
+        app:srcCompat="@drawable/ic_shopping_basket_black_24dp" />
+
+
+</RelativeLayout>

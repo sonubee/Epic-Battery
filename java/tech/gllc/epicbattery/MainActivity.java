@@ -4,9 +4,6 @@ import android.app.Fragment;
 import android.app.FragmentManager;
 import android.app.FragmentTransaction;
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
-import android.view.View;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
@@ -15,7 +12,6 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.widget.Button;
 import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity
@@ -34,7 +30,7 @@ public class MainActivity extends AppCompatActivity
         //firstFragment = (Button) findViewById(R.id.firstFragment);
         //secondFragment = (Button) findViewById(R.id.secondFragment);
         batteryRange = findViewById(R.id.batteryRange);
-
+/*
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -43,7 +39,7 @@ public class MainActivity extends AppCompatActivity
                         .setAction("Action", null).show();
             }
         });
-
+*/
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
                 this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
@@ -53,7 +49,7 @@ public class MainActivity extends AppCompatActivity
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
 
-        loadFragment(new FirstFragment());
+        loadFragment(new FragmentLoad());
 
         //TextView batteryRange = findViewById(R.id.batteryRange);
 /*
@@ -62,7 +58,7 @@ public class MainActivity extends AppCompatActivity
             @Override
             public void onClick(View v) {
 // load First Fragment
-                loadFragment(new FirstFragment());
+                loadFragment(new FragmentLoad());
             }
         });
 // perform setOnClickListener event on Second Button
@@ -70,7 +66,7 @@ public class MainActivity extends AppCompatActivity
             @Override
             public void onClick(View v) {
 // load Second Fragment
-                loadFragment(new SecondFragment());
+                loadFragment(new FragmentBatteryStatus());
             }
         });
 */
@@ -78,7 +74,7 @@ public class MainActivity extends AppCompatActivity
         batteryRange.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                loadFragment(new SecondFragment());
+                loadFragment(new FragmentBatteryStatus());
             }
         });
 */
