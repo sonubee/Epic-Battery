@@ -36,7 +36,7 @@ public class FragmentLoad extends Fragment {
 
                 FragmentBatteryStatus nextFrag= new FragmentBatteryStatus();
                 getActivity().getFragmentManager().beginTransaction()
-                        .replace(R.id.frameLayout, nextFrag,"findThisFragment")
+                        .replace(R.id.frameLayout, nextFrag,"FragmentBatteryStatus")
                         .addToBackStack(null)
                         .commit();
 

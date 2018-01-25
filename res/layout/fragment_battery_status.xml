@@ -11,8 +11,8 @@
         android:layout_height="45dp"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
-        android:layout_marginStart="35dp"
-        android:layout_marginTop="71dp"
+        android:layout_marginStart="45dp"
+        android:layout_marginTop="45dp"
         android:src="@drawable/okface" />
 
     <TextView
@@ -37,7 +37,7 @@
         android:layout_width="100dp"
         android:layout_height="100dp"
         android:layout_alignTop="@+id/face"
-        android:layout_marginStart="38dp"
+        android:layout_marginStart="30dp"
         android:layout_toEndOf="@+id/batteryConditionText"
         android:src="@drawable/battery" />
 
